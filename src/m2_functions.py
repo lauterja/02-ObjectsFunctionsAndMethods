@@ -31,6 +31,8 @@ def main():
 
     print(hypotenuse(6.5,5.4312))
 
+    movement('red', 3)
+
 
 ###############################################################################
 # DONE: 3a.  Define a function immediately below this _TODO_.
@@ -52,7 +54,7 @@ def hypotenuse (a,b):
     return c
 
 ###############################################################################
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# DONE: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -74,14 +76,25 @@ def hypotenuse (a,b):
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function at least TWICE (with different values
+# DONE: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
+def movement(color, thickness):
+    window = rg.TurtleWindow()
+    henry = rg.SimpleTurtle('turtle')
+    henry.pen = rg.Pen('green', thickness)
+    henry.speed = 2
+    izzy = rg.SimpleTurtle('turtle')
+    izzy.pen = rg.Pen(color, 5)
+    izzy.speed = 2
+    henry.forward(100)
+    izzy.backward(100)
+    window.close_on_mouse_click()
 
 
 ###############################################################################
-# TODO: 5.
+# DONE: 5.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
