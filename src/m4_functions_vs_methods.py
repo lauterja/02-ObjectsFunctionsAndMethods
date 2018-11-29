@@ -208,7 +208,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ###########################################################################
-    # TODO: 6. Implement and test this function, per its doc-string above.
+    # DONE: 6. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #   NOTE: This function should ** CALL ** the
@@ -220,9 +220,20 @@ def try_methods_and_functions():
     bill.speed = 5
     bill.backward(150)
     bill.speed = 1
-    my_turtle.draw_square(100)
-    my_turtle.left(30)
-    my_turtle.speed = 5
+    draw_many_squares(bill, 2, 100, 30)
+    bill.speed = 5
+    bill.pen.color = 'red'
+    draw_many_squares(bill, 10, 50, 15)
+    bill.speed = 100
+    bill.pen.thickness = 35
+    draw_many_squares(bill, 8, 300, 60)
+    bill.pen = rg.Pen('black', 3)
+    bill.backward(200)
+    bill.draw_circle(30)
+    bill.draw_square(50)
+
+
+
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
