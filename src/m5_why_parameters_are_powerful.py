@@ -133,6 +133,7 @@ def better_draw_circles(point):
     turtle = rg.SimpleTurtle()
     turtle.pen_up()
     turtle.go_to(point)
+    turtle.draw_circle(radius=10)
     turtle.set_heading(0)  # Point "east" (towards the right)
 
     for k in range(1, 11):  # k becomes 1, 2, 3, ... 10
@@ -141,11 +142,11 @@ def better_draw_circles(point):
 
         # Go DOWN 15 pixels, ending up pointing east again
         turtle.right(90)
-        turtle.forward(radii)
+        turtle.forward(radius)
         turtle.left(90)
 
         turtle.pen_down()
-        turtle.draw_circle(radii * k)  # Radius 15, 30, 45, 60, ...
+        turtle.draw_circle(radius * k)  # Radius 15, 30, 45, 60, ...
 
 
 ###############################################################################
